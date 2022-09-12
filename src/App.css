@@ -1,0 +1,209 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+.line {
+  font-family: 'Anonymous Pro', monospace;
+  top: 50%;  
+  width: 24em;
+  border-right: 2px solid rgba(255,255,255,.75);
+  white-space: nowrap;
+  transform: translateY(-50%); 
+}
+
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 5em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+.App {
+  background-color: #E9EEF6;
+}
+
+.link {
+  text-decoration: none;
+  color: #9c9a9a;
+}
+
+.img-ns {
+  animation: fadeInDown;
+  animation-duration: 2s;
+}
+
+.img-ns-dark {
+  display: none;
+  animation: fadeInDown;
+  animation-duration: 2s;
+}
+
+.title {
+  margin-top: 43px;
+  right: 140px;
+  color: #000000;
+  animation: fadeInDown;
+  animation-duration: 0.3s;
+}
+
+.but {
+  position: absolute;
+  top: 30px;
+  right: 16px;
+  animation: flipInX;
+  animation-duration: 1s;
+}
+
+.text-ns {
+  color: rgba(175, 37, 129, 0.733);
+  animation: fadeInDown;
+  animation-duration: 3s;
+}
+
+.img {
+  margin: 25px 0px 0px 15px;
+  animation: flipInX;
+  animation-duration: 1s;
+}
+
+.img-text {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottom {
+  background-color: #E9EEF6;
+  width: 100%;
+  height: 100%;
+  min-height: 30px;
+  margin-top: -40px;
+}
+
+.header {
+  height: 120px;
+  width: 100%;
+  background-color: #E9EEF6;
+  padding: 50px 40px;
+  border-radius: 0px 0px 40px 40px;
+  box-shadow: 0px 3px 7px #00ffd5;
+}
+
+.card-container {
+  height: 300px;
+  width: 300px;
+  box-shadow: 0px 3px 50px #A5A5A5;
+}
+
+.card-wrapper {
+  width: 270px;
+  height: 200px;
+  box-shadow: 0px 3px 50px #525252;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  animation: jackInTheBox;
+  animation-duration: 2s;
+  border-radius: 3px 3px 10px 10px;
+}
+
+.card-top {
+  width: 100%;
+  height: 2%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.task-holder {
+  width: 100%;
+  height: 98%;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 1px 1px 10px 10px;
+}
+
+.card-header {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 100px;
+  height: 30px;
+  padding: 1px 1px !important;
+  text-align: center;
+}
+
+.task-container {
+  min-height: 500px;
+  max-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #E9EEF6;
+  padding: 40px 100px;
+}
+
+@media only screen and (max-width: 320px) {
+  .task-container {
+    min-height: 500px;
+  }
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 768px) {
+  .task-container {
+    min-height: 800px;
+    padding: 40px 60px;
+    align-content: center;
+    max-height: 100%;
+  }
+  .title {
+    margin-left: 120px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .task-container {
+    min-height: 1060px;
+  }
+  .title {
+    margin-left: 140px;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  .task-container {
+    min-height: 700px;
+  }
+  .title {
+    margin-left: 150px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .task-container {
+    background: #242525;
+  }
+  .img-ns {
+    display: none;
+  }
+  .img-ns-dark {
+    display: block;
+  }
+  .task-holder {
+    background: #1d2638;
+  }
+  .App {
+    background: #242525;
+    color: #ffff;
+  }
+  .bottom {
+    background-color: #242525;
+    color: #ffff;
+  }
+  .header {
+    background-color: #2f3030;
+    color: #ffff;
+    box-shadow: 0px 3px 7px #8b064f;
+  }
+  .title {
+    color: #ffff;
+  }
+}
